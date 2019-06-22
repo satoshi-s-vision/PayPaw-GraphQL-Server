@@ -63,3 +63,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added for PayPaw
 gem 'devise', '~> 4.6.2'
+
+# Faker (can remove)
+group :development do
+  gem 'faker', '~> 1.9.4'
+end
