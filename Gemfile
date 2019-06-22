@@ -68,3 +68,5 @@ gem 'devise', '~> 4.6.2'
 group :development do
   gem 'faker', '~> 1.9.4'
 end
+
+gem 'pry', '~> 0.12.2'
