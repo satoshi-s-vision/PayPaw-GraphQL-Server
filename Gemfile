@@ -63,6 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added for PayPaw
 gem 'devise', '~> 4.6.2'
+gem 'graphql', '~> 1.9.6'
 
 # Faker (can remove)
 group :development do
@@ -70,3 +71,4 @@ group :development do
 end
 
 gem 'pry', '~> 0.12.2'
+gem 'graphiql-rails', group: :development

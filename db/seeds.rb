@@ -16,12 +16,8 @@ PROJECT_USERS = {
     'bob@example.com' => PROJECT_TITLES[OFFSET..-1]
 }
 
-puts PROJECT_USERS
-
 PROJECT_USERS.each do |email, projects|
-    binding.pry
     user = User.new(email: email, password: 'secret')
     projects.each { |title| user.projects.build(title: title) }
-    puts user
     user.save
 end
