@@ -10,17 +10,24 @@ module Types
       "Hello World!"
     end
 
-    field :me, Types::UserType, null: false,
+    field :me, Types::UserType, null: true,
       description: "the current user"
     def me
-      User.first
+      context[:current_user]
     end
 
-    field :projects, [Types::ProjectType], null: false,
-      description: "the projects for the current user"
-    def projects
-      Project.all
+    field :bills, [Types::BillType], null: false,
+      description: "the bills for the current user"
+    def bills
+      context[:current_user].bills
     end
 
+    field :bill, Types::BillType, null: false do
+      description "find bill by id user"
+      argument :id, ID, required: true
+    end
+    def bill(id:)
+      Bill.find(id)
+    end
   end
 end
