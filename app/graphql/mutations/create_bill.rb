@@ -5,7 +5,11 @@ class Mutations::CreateBill < Mutations::BaseMutation
   field :errors, [String], null: false
 
   def resolve(note: nil)
-    bill = Bill.new(note: note, user_id: context[:current_user].id)
+    bill = Bill.new(
+      note: note,
+      user_id: context[:current_user].id,
+      address: SecureRandom.hex(21) # this is just for mock address
+    )
 
     if bill.save
       # Successful creation, return the created object with no errors
