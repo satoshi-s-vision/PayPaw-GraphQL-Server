@@ -3,13 +3,6 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
-    end
-
     field :me, Types::UserType, null: true,
       description: "the current user"
     def me
@@ -22,12 +15,12 @@ module Types
       context[:current_user].bills
     end
 
-    field :bill, Types::BillType, null: false do
+    field :bill, Types::BillType, null: true do
       description "find bill by id user"
       argument :id, ID, required: true
     end
     def bill(id:)
-      Bill.find(id)
+      Bill.find_by(id: id, user_id: context[:current_user].id)
     end
   end
 end

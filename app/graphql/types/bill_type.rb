@@ -1,9 +1,9 @@
 module Types
   class BillType < Types::BaseObject
     field :id, ID, null: false
-    field :title, String, null: false
-    def title
-      @object.user.email + '-' + @object.title
+    field :note, String, null: false
+    def note
+      @object.user.email + '-' + @object.note
     end
 
     field :user, UserType, null: false
