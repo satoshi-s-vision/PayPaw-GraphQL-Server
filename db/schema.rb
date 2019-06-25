@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_023627) do
+ActiveRecord::Schema.define(version: 2019_06_25_022444) do
 
   create_table "bills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "note"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_06_24_023627) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "currency", limit: 64
-    t.integer "currency_amount"
+    t.decimal "currency_amount", precision: 20, scale: 8
     t.string "address", limit: 64
     t.integer "asset_id"
     t.integer "asset_amount"
