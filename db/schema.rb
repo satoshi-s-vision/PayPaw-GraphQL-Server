@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_022444) do
+ActiveRecord::Schema.define(version: 2019_06_25_023430) do
 
   create_table "bills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "note"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "currency", limit: 64
-    t.decimal "currency_amount", precision: 20, scale: 8
-    t.string "address", limit: 64
+    t.string "currency", limit: 64, null: false
+    t.decimal "currency_amount", precision: 20, scale: 8, default: "0.0", null: false
+    t.string "address", limit: 64, null: false
     t.integer "asset_id"
     t.integer "asset_amount"
-    t.boolean "status"
+    t.boolean "status", default: false, null: false
     t.index ["user_id"], name: "index_bills_on_user_id"
   end
 

@@ -3,12 +3,14 @@ class Mutations::CreateBill < Mutations::BaseMutation
 
   field :bill, Types::BillType, null: false
   field :errors, [String], null: false
+  field :currency_amount, Float, null: false
 
-  def resolve(note: nil)
+  def resolve(note: nil, currency_amount: 0)
     bill = Bill.new(
       note: note,
       user_id: context[:current_user].id,
-      address: SecureRandom.hex(21) # this is just for mock address
+      currency_amount: currency_amount,
+      address: SecureRandom.hex(21), # this is just for mock address
     )
 
     if bill.save
