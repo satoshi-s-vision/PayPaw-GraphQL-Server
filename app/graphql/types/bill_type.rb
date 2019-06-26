@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class BillType < Types::BaseObject
     field :id, ID, null: false
@@ -12,6 +14,5 @@ module Types
     # end
 
     field :user, UserType, null: false
-
   end
 end
