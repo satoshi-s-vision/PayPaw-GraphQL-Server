@@ -1,13 +1,6 @@
 AllCops:
   Exclude:
   - 'db/schema.rb'
-  - Berksfile
-  - recipes/basic.rb
-  - attributes/*.rb
-  - db/**
-  - config/**
-  - script/**
-  - 'config.ru'
   DisabledByDefault: true
   StyleGuideBaseURL: https://shopify.github.io/ruby-style-guide/
 
