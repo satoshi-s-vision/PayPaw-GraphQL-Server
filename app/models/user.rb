@@ -6,7 +6,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :recipient_name, uniqueness: { case_sensitive: false }, presence: true, allow_blank: false, format: { with: /\A[a-zA-Z0-9._-]+\z/ }
+  validates :email, presence: true, allow_blank: false
+  validates :first_name, presence: true, allow_blank: false
+  validates :last_name, presence: true, allow_blank: false
+  validates :recipient_name, uniqueness: { case_sensitive: false }, presence: true, allow_blank: false
+  validates :recipient_wallet_address, presence: true, allow_blank: false
 
   has_many :bills
 
