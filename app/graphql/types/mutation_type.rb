@@ -3,5 +3,6 @@
 module Types
   class MutationType < Types::BaseObject
     field :create_bill, mutation: Mutations::CreateBill
+    field :create_user, mutation: Mutations::CreateUser
   end
 end

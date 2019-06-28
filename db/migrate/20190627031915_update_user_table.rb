@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UpdateUserTable < ActiveRecord::Migration[5.2]
   def change
     add_column(:users, :recipient_name, 'varchar(64)', null: false, unique: true)

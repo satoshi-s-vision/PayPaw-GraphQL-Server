@@ -9,8 +9,6 @@ module Mutations
 
     field :bill, Types::BillType, null: false
     field :errors, [String], null: false
-    field :currency_amount, Float, null: false
-    field :currency, String, null: false
 
     def resolve(note: nil, currency: 'USD', currency_amount: 0.0)
       bill = Bill.new(
