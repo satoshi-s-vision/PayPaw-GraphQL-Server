@@ -25,4 +25,4 @@ Things you may want to cover:
 
 # PayPaw.org 🍱🍣🥘
 
-this project is kind stuck, everything rewrited in nodejs checkout here: https://github.com/satoshi-s-vision/PayPaw-Server
+nodejs PROD version here: https://github.com/satoshi-s-vision/PayPaw-Server
