@@ -25,6 +25,4 @@ Things you may want to cover:
 
 # PayPaw.org 🍱🍣🥘
 
-Project for Devcon2 (Bytom Blockchain)
-
-https://devcon.bytom.io/
+this project is kind stuck, everything rewrited in nodejs checkout here: https://github.com/satoshi-s-vision/PayPaw-Server
