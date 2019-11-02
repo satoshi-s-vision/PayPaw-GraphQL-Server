@@ -64,7 +64,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Added for PayPaw
-gem 'devise', '~> 4.6.2'
+gem 'devise', '~> 4.7.1'
 gem 'graphql', '~> 1.9.6'
 
 # Faker (can remove)
